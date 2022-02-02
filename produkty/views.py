@@ -3,6 +3,7 @@ from datetime import datetime
 
 def produkt_list(request):
     return render(request, 'produkty/produkt_list.html', {'czas': datetime.utcnow()})
+                            #sciezka                       #kontekst
 
-
-
+def mark(request, id):
+    return render(request, 'produkty/produkt_list.html', {'mark': Marka.objects.get(pk=id)})

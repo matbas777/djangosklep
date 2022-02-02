@@ -21,12 +21,12 @@ class Produkt(models.Model):
     marka = models.ForeignKey(Marka, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=70)
-    opis = models.TextField
+    opis = models.TextField(null= True)
     rok_prdukcji = models.IntegerField()
     przebieg = models.IntegerField(null=True, blank=True)
     paliwo = models.CharField(max_length=20, choices=Paliwo.choices)
     HP = models.IntegerField(null=True, blank=True)
-    cena = models.DecimalField(max_digits=7, decimal_places=2)
+    cena = models.DecimalField(max_digits=10, decimal_places=2)
 
 
 class Obraz(models.Model):
