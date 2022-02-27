@@ -1,0 +1,19 @@
+
+
+{% block title %}
+    Zaloguj
+{% endblock %}
+
+{% block content %}
+<h2>Login</h2>
+{% if is_dodaj_ogloszenie %}
+<p>Aby dodać ogłoszenie musisz się zalogować.</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Zaloguj sie</button>
+</form>
+<p><a href="{% url 'zarej' %}"><button>ZAREJESTRUJ</button></a></p>
+{% endblock %}
+<p><a href="{% url 'bejs' %}"><button>POWRÓT DO STRONY GŁÓWNEJ</button> </a></p>

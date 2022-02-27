@@ -1,0 +1,19 @@
+{% extends 'produkty/base.html' %}
+
+
+{% block content-ogloszenia %}
+
+{% for oglosz in ogloszenie %}
+<p>{{ oglosz.title }}</p>
+<p>{{ oglosz.rok_prdukcji }}</p>
+<p>{{ oglosz.opis }}</p>
+<p>{{ oglosz.paliwo }}</p>
+<p>{{ oglosz.cena }}</p>
+
+
+
+{% endfor %}
+
+{% endblock %}
+
+<p><a href="{% url 'bejs' %}"><button>POWRÓT DO STRONY GŁÓWNEJ</button> </a></p>

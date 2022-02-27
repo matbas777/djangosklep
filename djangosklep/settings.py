@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'produkty',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -54,24 +54,33 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangosklep.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context'
-            '_processors': [
+            'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'produkty.context_processors.element_statyczny',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'djangosklep.wsgi.application'
+
+LOGIN_REDIRECT_URL = 'bejs'
+LOGOUT_REDIRECT_URL = 'bejs'
+
+LOGIN_URL = 'login'
+
 
 
 # Database

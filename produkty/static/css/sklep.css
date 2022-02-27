@@ -1,0 +1,22 @@
+
+h1 {
+    font-size: 70px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+img{
+width: 250px;
+height: 100px;
+
+}
+body{
+    background-color: #C5D6B0;
+    padding: 35px 0px;
+    margin: 0 auto 0 auto;
+}
+
+header{
+    margin-bottom: 70px;
+    margin-top: 50px;
+
+}

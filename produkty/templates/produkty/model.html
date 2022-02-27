@@ -1,0 +1,10 @@
+{% extends 'produkty/base.html' %}
+
+
+{% block content-modele %}
+    {% for mod in model %}
+
+<p><a href="{% url 'id-modelu' mod.pk %}">{{ mod }}</a></p>
+
+    {% endfor %}
+{% endblock %}
